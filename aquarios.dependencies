@@ -1,0 +1,20 @@
+[
+    {
+        "remote":       "github",
+        "repository":   "arkaroy14/android-device-leeco-x3-new",
+        "target_path":  "device/leeco/x3",
+        "revision":     "AquariOS"
+    },
+    {
+        "remote":       "github",
+        "repository":   "SuryashankarDas/turbo-x3",
+        "target_path":  "kernel/leeco/x3",
+        "revision":     "android-n"
+    },
+    {
+        "remote":       "github",
+        "repository":   "VenkatVishalV/proprietary_vendor_leeco",
+        "target_path":  "vendor/leeco",
+        "revision":     "master"
+    }
+]
