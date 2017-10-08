@@ -1,5 +1,5 @@
 # Check for target product
-ifeq (aosp_x3,$(TARGET_PRODUCT))
+ifeq (aquarios_x3,$(TARGET_PRODUCT))
 
 LOCAL_PATH := device/leeco/x3
 
@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common Aosp stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aquarios/config/common_full_phone.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := x3
@@ -21,7 +21,7 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosp_x3
+PRODUCT_NAME := aquarios_x3
 PRODUCT_DEVICE := x3
 PRODUCT_BRAND := LeEco
 PRODUCT_MODEL := Le 1s
@@ -32,7 +32,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_CHARACTERISTICS := nosdcard
 
 #Maintainer Name
-PRODUCT_PROPERTY_OVERRIDES += ro.aosp.maintainer="Arka Roy Chowdhury"
+PRODUCT_PROPERTY_OVERRIDES += ro.aquarios.maintainer="Arka Roy Chowdhury"
 
 # Google client ID property.
 PRODUCT_GMS_CLIENTID_BASE := android-leeco
