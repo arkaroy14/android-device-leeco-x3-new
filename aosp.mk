@@ -32,7 +32,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_CHARACTERISTICS := nosdcard
 
 #Maintainer Name
-PRODUCT_PROPERTY_OVERRIDES += ro.aosp.maintainer="Arka Roy Chowdhury"
+PRODUCT_PROPERTY_OVERRIDES += ro.aosp.maintainer="Arkaroy"
 
 # Google client ID property.
 PRODUCT_GMS_CLIENTID_BASE := android-leeco
