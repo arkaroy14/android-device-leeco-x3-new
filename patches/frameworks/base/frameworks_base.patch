@@ -1,0 +1,19 @@
+diff --git a/services/core/java/com/android/server/pm/PackageManagerService.java b/services/core/java/com/android/server/pm/PackageManagerService.java
+index 403a1fb..8a05973 100755
+--- a/services/core/java/com/android/server/pm/PackageManagerService.java
++++ b/services/core/java/com/android/server/pm/PackageManagerService.java
+@@ -19851,10 +19851,13 @@ Slog.v(TAG, ":: stepped forward, applying functor at tag " + parser.getName());
+                 assertPackageKnown(volumeUuid, pkg.packageName);
+ 
+             } catch (PackageParserException | PackageManagerException e) {
++		if (file.getAbsolutePath().equals("/data/app/mcRegistry")) {
++		logCriticalInfo(Log.WARN, "[Decker] We keep " + file.getAbsolutePath() + " due to store fingerprints.");
++		} else {
+                 logCriticalInfo(Log.WARN, "Destroying " + file + " due to: " + e);
+                 synchronized (mInstallLock) {
+                     removeCodePathLI(file);
+-                }
++                }}
+             }
+         }
+     }
