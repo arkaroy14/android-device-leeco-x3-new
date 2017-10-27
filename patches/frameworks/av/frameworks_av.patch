@@ -134,36 +134,6 @@ index 05f6581..b78b047 100644
          BUFFER_FLAG_EXTRADATA   = 0x1000,
          BUFFER_FLAG_DATACORRUPT = 0x2000,
      };
-diff --git a/media/libstagefright/Android.mk b/media/libstagefright/Android.mk
-index 3df56eb..c2dd7dc 100644
---- a/media/libstagefright/Android.mk
-+++ b/media/libstagefright/Android.mk
-@@ -165,10 +165,25 @@ ifeq ($(TARGET_OMX_LEGACY_RESCALING),true)
- LOCAL_CFLAGS += -DUSE_LEGACY_RESCALING
- endif
- 
-+ifeq ($(strip $(BOARD_USES_MTK_HARDWARE)),true)
-+
-+LOCAL_SHARED_LIBRARIES += libdpframework
-+endif
-+
- ifeq ($(TARGET_HAS_LEGACY_HSR),true)
- LOCAL_CFLAGS += -DLEGACY_HSR
- endif
- 
-+ifeq ($(strip $(BOARD_USES_MTK_HARDWARE)),true)
-+
-+LOCAL_SHARED_LIBRARIES += libdpframework
-+endif
-+
-+ifeq ($(strip $(BOARD_USES_MTK_HARDWARE)),true)
-+
-+LOCAL_SHARED_LIBRARIES += libdpframework
-+endif
-+
- LOCAL_CFLAGS += -Wno-multichar -Werror -Wno-error=deprecated-declarations -Wall
- 
- LOCAL_C_INCLUDES += $(call project-path-for,qcom-media)/mm-core/inc
 diff --git a/media/libstagefright/MediaSource.cpp b/media/libstagefright/MediaSource.cpp
 index a17757a..bc0206f 100644
 --- a/media/libstagefright/MediaSource.cpp
