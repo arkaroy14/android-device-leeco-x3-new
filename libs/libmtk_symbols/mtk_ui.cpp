@@ -1,3 +1,7 @@
+#include <array>
+#include <string>
+#include <sstream>
+#include <iostream>
 #include <ui/GraphicBufferMapper.h>
 #include <ui/PixelFormat.h>
 #include <ui/Rect.h>
