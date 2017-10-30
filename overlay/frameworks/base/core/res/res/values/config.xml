@@ -132,7 +132,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <add-resource type="integer" name="config_deviceHardwareWakeKeys"></add-resource>
+    <add-resource type="integer" name="config_deviceHardwareWakeKeys">64</add-resource>
     <integer name="config_deviceHardwareWakeKeys">64</integer>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
@@ -256,7 +256,7 @@
  <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
  <!-- If enabled, capacitive keys will only light up when user presses the keys.
  Otherwise, the buttons will light up whenever the user interacts with the device. -->
- <add-resource type="bool" name="config_buttonLightOnKeypressOnly"></add-resource>
+ <add-resource type="bool" name="config_buttonLightOnKeypressOnly">true</add-resource>
  <bool name="config_buttonLightOnKeypressOnly">true</bool>
  
 </resources>
