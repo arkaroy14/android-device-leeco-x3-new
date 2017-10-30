@@ -126,7 +126,7 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
-#TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/i2c-2/2-004b/wake_gesture_enable"
+#TARGET_TAP_TO_WAKE_NODE := "/sys/devices/bus.2/11009000.I2C2/i2c-2/2-004b/input/input4/wake_gesture"
 
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -201,3 +201,16 @@ BOARD_BLUE_LED_PATH := "/sys/class/leds/blue"
 
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += net.tethering.noprovisioning=true
+
+# Google properties overides
+PRODUCT_PROPERTY_OVERRIDES += \
+keyguard.no_require_sim=true \
+ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+ro.com.google.clientidbase=android-google \
+ro.com.android.wifi-watchlist=GoogleGuest \
+ro.error.receiver.system.apps=com.google.android.gms \
+ro.setupwizard.enterprise_mode=1 \
+ro.com.android.dataroaming=false \
+net.tethering.noprovisioning=true \
+ro.setupwizard.rotation_locked=true
