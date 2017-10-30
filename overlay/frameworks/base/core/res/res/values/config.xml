@@ -215,7 +215,7 @@
     <!-- Control whether Night display is available. -->
     <bool name="config_nightDisplayAvailable">false</bool>
     
-    <add-resource type="bool" name="config_supportDoubleTapWake"></add-resource>
+    <add-resource type="bool" name="config_supportDoubleTapWake">true</add-resource>
     <bool name="config_supportDoubleTapWake">true</bool>
     <bool name="config_networkSamplingWakesDevice">false</bool>
      <bool name="config_wifi_batched_scan_supported">false</bool>
