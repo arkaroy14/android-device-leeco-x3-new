@@ -13,6 +13,9 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Inherit some common Aosp stuff.
 $(call inherit-product, vendor/aosp/common.mk)
 
+# Include Bootanimation configaration
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Release name
 PRODUCT_RELEASE_NAME := x3
 
